@@ -27,6 +27,20 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
           title: "孔明灯"
         },
         component: () => import("@/pages/shaders/light/index.vue")
+      },
+      {
+        path: "wave",
+        meta: {
+          title: "波浪"
+        },
+        component: () => import("@/pages/shaders/wave/index.vue")
+      },
+      {
+        path: "bathhub",
+        meta: {
+          title: "浴缸"
+        },
+        component: () => import("@/pages/shaders/bathhub/index.vue")
       }
     ]
   }
