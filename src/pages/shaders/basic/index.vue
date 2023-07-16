@@ -1,8 +1,23 @@
 <script setup lang="ts">
+import { ref, onMounted } from "vue"
+
+import createScene from "./basic"
+
+const domRef = ref<HTMLElement>()
+
+onMounted(() => {
+  createScene(domRef.value)
+})
 
 </script>
 <template>
-  <div>Shaders basic</div>
+  <div ref="domRef" class="shaders-basic-pg">
+    
+  </div>
 </template>
 <style lang="scss">
+.shaders-basic-pg {
+  width: 100%;
+  height: 100%;
+}
 </style>

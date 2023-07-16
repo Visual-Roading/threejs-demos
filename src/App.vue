@@ -11,7 +11,6 @@ function navigate(path?: string) {
   if (path) {
     router.push(path)
   }
-
 }
 
 const menuOptions: MenuOption[] = ThreeJSRoutes.map(item => {
@@ -38,16 +37,14 @@ const defOpendMenuIds = menuOptions.map(item => item.key)
 </script>
 
 <template>
-  <div>
-    <n-popover>
-      <template #trigger>
-        <n-button type="primary" class="app-menu">菜单</n-button>
-      </template>
-      <!-- 1111 -->
-      <n-menu mode="vertical" :options="menuOptions" :default-expanded-keys="defOpendMenuIds" @update:value="navigate" />
-    </n-popover>
-    <router-view></router-view>
-  </div>
+  <n-popover>
+    <template #trigger>
+      <n-button type="primary" class="app-menu">菜单</n-button>
+    </template>
+    <!-- 1111 -->
+    <n-menu mode="vertical" :options="menuOptions" :default-expanded-keys="defOpendMenuIds" @update:value="navigate" />
+  </n-popover>
+  <router-view></router-view>
 </template>
 
 <style lang="scss">
