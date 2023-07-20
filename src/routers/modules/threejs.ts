@@ -48,6 +48,13 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
           title: "烟花"
         },
         component: () => import("@/pages/shaders/firework/index.vue")
+      },
+      {
+        path: "material",
+        meta: {
+          title: "材质加工"
+        },
+        component: () => import("@/pages/shaders/material/index.vue")
       }
     ]
   }
