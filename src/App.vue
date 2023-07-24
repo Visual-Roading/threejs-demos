@@ -14,18 +14,23 @@ function navigate(path?: string) {
 }
 
 const menuOptions: MenuOption[] = ThreeJSRoutes.map(item => {
-  const children: MenuOption[] = (item.children ?? []).map(subItem => {
-    return {
-      label: subItem.meta?.title,
-      key: subItem.path ? (item.path + "/" + subItem.path) : item.path
-    }
-  })
-
-  return {
+  const menuItem: MenuOption = {
     label: item.meta?.title,
     key: item.path,
-    children,
   }
+
+  if (item.children && item.children.length) {
+    const children: MenuOption[] = (item.children ?? []).map(subItem => {
+      return {
+        label: subItem.meta?.title,
+        key: subItem.path ? (item.path + "/" + subItem.path) : item.path
+      }
+    })
+
+    menuItem.children = children
+  }
+
+  return menuItem
 })
 menuOptions.unshift({
   label: "首页",

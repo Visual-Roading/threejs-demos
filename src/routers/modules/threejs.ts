@@ -57,6 +57,21 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         component: () => import("@/pages/shaders/material/index.vue")
       }
     ]
+  },
+  {
+    path: "/post-processing",
+    meta: {
+      title: "后期处理"
+    },
+    children: [
+      {
+        path: "",
+        meta: {
+          title: "基础"
+        },
+        component: () => import("@/pages/post-processing/basic/index.vue"),
+      },
+    ],
   }
 ]
 
