@@ -71,6 +71,13 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         },
         component: () => import("@/pages/post-processing/basic/index.vue"),
       },
+      {
+        path: "custom",
+        meta: {
+          title: "自定义"
+        },
+        component: () => import("@/pages/post-processing/custom/index.vue"),
+      },
     ],
   }
 ]
