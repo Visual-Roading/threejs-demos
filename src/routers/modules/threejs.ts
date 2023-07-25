@@ -79,6 +79,13 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         component: () => import("@/pages/post-processing/custom/index.vue"),
       },
     ],
+  },
+  {
+    path: "/geo-map",
+    meta: {
+      title: "Geo地图"
+    },
+    component: () => import("@/pages/map/geo/index.vue"),
   }
 ]
 
