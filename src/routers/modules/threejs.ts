@@ -85,7 +85,22 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
     meta: {
       title: "Geo地图"
     },
-    component: () => import("@/pages/map/geo/index.vue"),
+    children: [
+      {
+        path: "",
+        meta: {
+          title: "基础"
+        },
+        component: () => import("@/pages/map/geo/index.vue"),
+      },
+      {
+        path: "fly-line",
+        meta: {
+          title: "飞线"
+        },
+        component: () => import("@/pages/map/fly-line/index.vue"),
+      },
+    ],
   }
 ]
 
