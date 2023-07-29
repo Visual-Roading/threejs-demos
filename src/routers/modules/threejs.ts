@@ -101,6 +101,28 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         component: () => import("@/pages/map/fly-line/index.vue"),
       },
     ],
+  },
+  {
+    path: "/html",
+    meta: {
+      title: "HTML交互"
+    },
+    children: [
+      {
+        path: "",
+        meta: {
+          title: "CSS渲染"
+        },
+        component: () => import("@/pages/html/css-render/index.vue"),
+      },
+      {
+        path: "curve-rotate",
+        meta: {
+          title: "曲线运动"
+        },
+        component: () => import("@/pages/html/curve-rotate/index.vue"),
+      },
+    ],
   }
 ]
 
