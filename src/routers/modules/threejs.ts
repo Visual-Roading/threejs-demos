@@ -123,7 +123,29 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         component: () => import("@/pages/html/curve-rotate/index.vue"),
       },
     ],
-  }
+  },
+  {
+    path: "/city",
+    meta: {
+      title: "智慧城市"
+    },
+    children: [
+      {
+        path: "",
+        meta: {
+          title: "扫描"
+        },
+        component: () => import("@/pages/city/scan/index.vue"),
+      },
+      {
+        path: "fly-line",
+        meta: {
+          title: "飞线"
+        },
+        component: () => import("@/pages/city/fly-line/index.vue"),
+      },
+    ],
+  },
 ]
 
 export default threeJSDemoRoutes
