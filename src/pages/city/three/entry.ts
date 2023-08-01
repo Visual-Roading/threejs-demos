@@ -1,13 +1,14 @@
-import { Scene, PerspectiveCamera, WebGLRenderer, EquirectangularRefractionMapping, ACESFilmicToneMapping, SRGBColorSpace, TextureLoader, Mesh, DoubleSide, MeshBasicMaterial, Color, Vector3  } from "three"
+import { Scene, PerspectiveCamera, WebGLRenderer, ACESFilmicToneMapping, SRGBColorSpace, Mesh, DoubleSide, MeshBasicMaterial, Vector3  } from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 import cityfModelUri from "@/assets/models/city/city.glb?url"
-import { createCityMaterial } from "./material/city"
-import { FlyLine } from "./fly-line"
-import { FlyLineShader, FlyLineShaderWithAnimation } from "./fly-line-shader"
-import { MeshLine } from "./mesh-line"
+import { createCityMaterial } from "../fly-line/material/city"
+import { FlyLine } from "../fly-line/fly-line"
+import { FlyLineShader, FlyLineShaderWithAnimation } from "../fly-line/fly-line-shader"
+import { MeshLine } from "../fly-line/mesh-line"
+import { LightBar } from "./light-bar"
+import { Radar } from "./radar"
 
 export default function createScene(container: HTMLElement) {
   const scene = new Scene()
@@ -79,11 +80,16 @@ export default function createScene(container: HTMLElement) {
 
   const flyLineShader1 = new FlyLineShaderWithAnimation([
     new Vector3(10, 0, 0),
-      new Vector3(6, 6, 12),
-      new Vector3(4, 0, 8),
-    ])
+    new Vector3(6, 6, 12),
+    new Vector3(4, 0, 8),
+  ])
+
+  const lightBar = new LightBar()
+  const radar = new Radar()
 
   scene.add(flyLine.mesh)
   scene.add(flyLineShader.mesh)
   scene.add(flyLineShader1.mesh)
+  scene.add(lightBar.mesh)
+  scene.add(radar.mesh)
 }

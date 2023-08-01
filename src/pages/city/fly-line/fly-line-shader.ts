@@ -1,4 +1,4 @@
-import { AdditiveBlending, BufferAttribute, BufferGeometry, CatmullRomCurve3, Color, Line, LineBasicMaterial, Material, Mesh, MeshBasicMaterial, MirroredRepeatWrapping, Points, RepeatWrapping, ShaderMaterial, Texture, Vector3 } from "three";
+import { AdditiveBlending, BufferAttribute, BufferGeometry, CatmullRomCurve3, Color, Material, Points, ShaderMaterial, Vector3 } from "three";
 
 import fragmentShader from "./shaders/flyLine/fragment.glsl?raw"
 import vertexShader from "./shaders/flyLine/vertex.glsl?raw"

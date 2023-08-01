@@ -144,6 +144,13 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         },
         component: () => import("@/pages/city/fly-line/index.vue"),
       },
+      {
+        path: "three",
+        meta: {
+          title: "综合"
+        },
+        component: () => import("@/pages/city/three/index.vue"),
+      },
     ],
   },
 ]
