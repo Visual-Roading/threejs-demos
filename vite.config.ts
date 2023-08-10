@@ -9,5 +9,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
     }
-  }
+  },
+  base: "/threejs-demos/",
 })
+
