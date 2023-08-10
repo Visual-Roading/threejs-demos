@@ -1,5 +1,7 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, ACESFilmicToneMapping, SRGBColorSpace, Mesh, DoubleSide, MeshBasicMaterial, Vector3  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 import cityfModelUri from "@/assets/models/city/city.glb?url"

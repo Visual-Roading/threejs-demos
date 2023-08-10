@@ -1,8 +1,13 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, CubeTextureLoader, ACESFilmicToneMapping  } from "three"
+// @ts-ignore
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'
+// @ts-ignore
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+// @ts-ignore
 import { DotScreenPass } from 'three/examples/jsm/postprocessing/DotScreenPass.js'
 
 import gltfModelUrl from "@/assets/models/DamagedHelmet/DamagedHelmet.gltf?url"

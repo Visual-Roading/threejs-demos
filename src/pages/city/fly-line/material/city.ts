@@ -5,10 +5,11 @@ export function createCityMaterial(mesh: Mesh, bottomColor: string, topColor: st
     color: bottomColor,
   })
 
+  // @ts-ignore
   const { min, max }: { min: Vector3, max: Vector3 } = mesh.geometry.boundingBox
   const meshHeight = max.y - min.y
 
-  material.onBeforeCompile = (shader, render) => {
+  material.onBeforeCompile = (shader) => {
     createGradColor(shader, topColor, meshHeight)
   }
 

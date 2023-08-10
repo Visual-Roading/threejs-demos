@@ -37,7 +37,7 @@ menuOptions.unshift({
   key: "/"
 })
 
-const defOpendMenuIds = menuOptions.map(item => item.key)
+const defOpendMenuIds = menuOptions.map(item => item.key!)
 
 </script>
 

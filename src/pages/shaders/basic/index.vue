@@ -6,7 +6,7 @@ import createScene from "./basic"
 const domRef = ref<HTMLElement>()
 
 onMounted(() => {
-  createScene(domRef.value)
+  createScene(domRef.value!)
 })
 
 </script>

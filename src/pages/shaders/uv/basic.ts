@@ -1,4 +1,5 @@
-import { PlaneGeometry, MeshBasicMaterial, Mesh, Scene, PerspectiveCamera, WebGLRenderer, AxesHelper, DoubleSide, ShaderMaterial  } from "three"
+import { PlaneGeometry, Mesh, Scene, PerspectiveCamera, WebGLRenderer, AxesHelper, DoubleSide, ShaderMaterial  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import fragmentShader from "./fragment.glsl?raw"

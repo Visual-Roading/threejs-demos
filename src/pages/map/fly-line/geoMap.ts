@@ -1,6 +1,7 @@
 import { GeoProjection, geoMercator } from "d3-geo"
 
-import { Scene, Camera, PerspectiveCamera, DirectionalLight, WebGLRenderer, AxesHelper, Object3D, Shape, LineBasicMaterial, Line, Vector3, BufferGeometry, ExtrudeGeometry, MeshBasicMaterial, Mesh, AmbientLight, Raycaster, Vector2, Group, DoubleSide, Event, CircleGeometry, LineLoop, QuadraticBezierCurve3, PlaneGeometry, AdditiveBlending, Color, BufferAttribute, TextureLoader, Texture } from "three"
+import { Scene, Camera, PerspectiveCamera, DirectionalLight, WebGLRenderer, AxesHelper, Object3D, Shape, LineBasicMaterial, Line, Vector3, BufferGeometry, ExtrudeGeometry, MeshBasicMaterial, Mesh, Raycaster, Vector2, Group, DoubleSide, Event, CircleGeometry, LineLoop, QuadraticBezierCurve3, PlaneGeometry, AdditiveBlending, Color, BufferAttribute, TextureLoader, Texture } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import img1 from "@/assets/images/map/lightray.jpg?url"
 import img2 from "@/assets/images/map/lightray_yellow.jpg?url"
@@ -112,6 +113,7 @@ export default class GeoMap {
    * @param geoJson geo地图数据
    * @param options 选项
    */
+  // @ts-ignore
   createMap(geoJson: any, options?: {
     boundaryColor?: string,
     areaColor?: string | number
@@ -212,6 +214,7 @@ export default class GeoMap {
     const geometry = new BufferGeometry()
     const positions: Vector3[] = []
     points.forEach(d => {
+      // @ts-ignore
       const [x, y, z] = d
       positions.push(new Vector3(x, y, 0))
     })
@@ -413,6 +416,7 @@ export default class GeoMap {
 
     if (this.flyGroup) {
       this.flyGroup.children.forEach(d => {
+        // @ts-ignore
         const colorAttribute = d.geometry.getAttribute("color")
 
         let colors = new Float32Array(this.pointsLength * 3)
@@ -430,6 +434,7 @@ export default class GeoMap {
     if (this.sixLineGroup) {
       this.sixLineGroup.children.forEach(d => {
         d.scale.set(1 + ratio, 1 + ratio, d.scale.z)
+        // @ts-ignore
         d.material.opacity = 1 - ratio
       })
     }

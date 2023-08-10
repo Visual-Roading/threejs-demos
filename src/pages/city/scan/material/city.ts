@@ -1,14 +1,15 @@
-import { Color, DoubleSide, Mesh, MeshBasicMaterial, Shader, Vector2, Vector3 } from "three";
+import { Color, Mesh, MeshBasicMaterial, Shader, Vector2, Vector3 } from "three";
 import { gsap } from "gsap";
 
 export function createCityMaterial(mesh: Mesh, bottomColor: string, topColor: string) {
   const material = new MeshBasicMaterial({
     color: bottomColor,
   })
-
+  
+  // @ts-ignore
   const { min, max }: { min: Vector3, max: Vector3 } = mesh.geometry.boundingBox
   const meshHeight = max.y - min.y
-
+  // @ts-ignore
   material.onBeforeCompile = (shader, render) => {
 
     createGradColor(shader, topColor, meshHeight)

@@ -1,6 +1,7 @@
-import { MeshBasicMaterial, Mesh, Scene, PerspectiveCamera, WebGLRenderer, AxesHelper, DoubleSide, CubeTextureLoader, MeshStandardMaterial, TextureLoader, DirectionalLight, PlaneGeometry, MeshDepthMaterial, RGBADepthPacking, Clock  } from "three"
+import { Mesh, Scene, PerspectiveCamera, WebGLRenderer, AxesHelper, DoubleSide, CubeTextureLoader, MeshStandardMaterial, TextureLoader, DirectionalLight, PlaneGeometry, MeshDepthMaterial, RGBADepthPacking, Clock  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader"
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 import gltfModelUrl from "@/assets/models/LeePerrySmith/LeePerrySmith.glb?url"

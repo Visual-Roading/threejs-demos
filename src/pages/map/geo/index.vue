@@ -7,7 +7,7 @@ const domRef = ref<HTMLElement>()
 const provinceDomRef = ref<HTMLElement>()
 
 onMounted(() => {
-  createScene(domRef.value, provinceDomRef.value)
+  createScene(domRef.value!, provinceDomRef.value!)
 })
 
 </script>

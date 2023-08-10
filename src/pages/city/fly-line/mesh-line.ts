@@ -1,7 +1,5 @@
 import { BufferGeometry, EdgesGeometry, LineBasicMaterial, LineSegments, Material } from "three";
 
-import { gsap } from "gsap";
-
 export class MeshLine {
   geometry: BufferGeometry
   material: Material

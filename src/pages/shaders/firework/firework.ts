@@ -27,6 +27,7 @@ class Firework {
   private color: Color
   private clock: Clock
   private scene?: Scene
+  // @ts-ignore
   private camera?: Camera
   private boomPointGeometry: BufferGeometry
   private boomPointMaterial: ShaderMaterial
@@ -36,7 +37,9 @@ class Firework {
   private startPointGeometry: BufferGeometry
   private startPointMaterial: ShaderMaterial
   private startPoint: Points
+  // @ts-ignore
   private from: FireworkPosition
+  // @ts-ignore
   private to: FireworkPosition
 
   private boomAudios: string[] = [

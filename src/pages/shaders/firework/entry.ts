@@ -1,8 +1,10 @@
-import { Scene, PerspectiveCamera, WebGLRenderer, AxesHelper, DoubleSide, ShaderMaterial, EquirectangularRefractionMapping, ACESFilmicToneMapping, SRGBColorSpace  } from "three"
+import { Scene, PerspectiveCamera, WebGLRenderer, EquirectangularRefractionMapping, ACESFilmicToneMapping, SRGBColorSpace  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+// @ts-ignore
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader"
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import gsap from "gsap"
 
 import Firework, { FireworkPosition } from "./firework"
 

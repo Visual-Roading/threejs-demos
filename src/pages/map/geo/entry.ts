@@ -1,4 +1,5 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, ACESFilmicToneMapping, Object3D, Shape, LineBasicMaterial, Line, Vector3, BufferGeometry, ExtrudeGeometry, MeshBasicMaterial, Mesh, AmbientLight, Raycaster, Vector2  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { geoMercator } from "d3-geo"
 
@@ -30,6 +31,7 @@ export default function createScene(container: HTMLElement, provinceContainer: H
   const ambientLight = new AmbientLight(0xffffff); // 环境光
   scene.add(ambientLight);
 
+  // @ts-ignore
   const map = createMap(chinaJson, { areaTransparent: true, areaColor, })
   scene.add(map)
 
@@ -49,16 +51,22 @@ export default function createScene(container: HTMLElement, provinceContainer: H
     // 将原来相交的省份颜色置为正常
     if (activeInstersect && activeInstersect.length) {
       activeInstersect.forEach(element => {
+        // @ts-ignore
         element.object.material[0].color.set(areaColor);
+        // @ts-ignore
         element.object.material[1].color.set(areaColor);
       })
     }
     // 检测鼠标与省份相交的元素
     activeInstersect = []
     for(let i = 0; i < intersects.length; i++) {
+      // @ts-ignore
       if (intersects[i].object.material && intersects[i].object.material.length === 2) {
+        // @ts-ignore
         activeInstersect.push(intersects[i]);
+        // @ts-ignore
         intersects[i].object.material[0].color.set(areaActiveColor);
+        // @ts-ignore
         intersects[i].object.material[1].color.set(areaActiveColor);
         break; // 只取第一个
       }
@@ -79,6 +87,7 @@ export default function createScene(container: HTMLElement, provinceContainer: H
   render();
 }
 
+// @ts-ignore
 function createMap(geoJson: any, options?: {
   center?: [number, number],
   scale?: number,
@@ -144,9 +153,12 @@ function createMap(geoJson: any, options?: {
     })
 
     // 将geo的属性放到省份模型中
+    // @ts-ignore
     province.properties = elem.properties
     if (elem.properties.contorid) {
+      // @ts-ignore
       const [x, y] = projection(elem.properties.contorid);
+      // @ts-ignore
       province.properties._centroid = [x, y]
     }
 

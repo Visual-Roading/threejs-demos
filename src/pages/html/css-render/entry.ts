@@ -1,5 +1,7 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, ACESFilmicToneMapping, AmbientLight, Raycaster, Vector2, SphereGeometry, Mesh, DirectionalLight, MeshPhongMaterial, Clock, TextureLoader  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+// @ts-ignore
 import { CSS2DRenderer, CSS2DObject, } from "three/examples/jsm/renderers/CSS2DRenderer.js"
 
 import earthSpecularTexture from "@/assets/textures/planets/earth_specular_2048.jpg?url"
@@ -113,6 +115,7 @@ export default function createScene(container: HTMLElement, ) {
     // chinaLabel.position
     // 向量(坐标)从世界空间投影到相机的标准化设备坐标 (NDC) 空间。
     chinaPosition.project(camera)
+    // @ts-ignore
     raycaster.setFromCamera(chinaPosition, camera)
     const intersects = raycaster.intersectObjects(scene.children,true)
     

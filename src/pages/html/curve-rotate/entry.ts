@@ -1,4 +1,5 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, ACESFilmicToneMapping, AmbientLight, Vector2, SphereGeometry, Mesh, DirectionalLight, MeshPhongMaterial, Clock, TextureLoader, CatmullRomCurve3, Vector3, BufferGeometry, Line, LineBasicMaterial, AxesHelper  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
 import earthSpecularTexture from "@/assets/textures/planets/earth_specular_2048.jpg?url"

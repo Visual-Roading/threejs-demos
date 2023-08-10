@@ -1,7 +1,11 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, EquirectangularRefractionMapping, ACESFilmicToneMapping, SRGBColorSpace, TextureLoader  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+// @ts-ignore
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader"
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+// @ts-ignore
 import { Water } from 'three/addons/objects/Water2.js';
 
 import envTexture from "@/assets/hdrs/beath.hdr?url"

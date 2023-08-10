@@ -1,4 +1,4 @@
-import { AdditiveBlending, Color, DoubleSide, Mesh, PlaneGeometry, ShaderMaterial, } from "three";
+import { Color, DoubleSide, Mesh, PlaneGeometry, ShaderMaterial, } from "three";
 
 import fragmentShader from "./shaders/radar/fragment.glsl?raw"
 import vertexShader from "./shaders/radar/vertex.glsl?raw"

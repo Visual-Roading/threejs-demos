@@ -42,7 +42,7 @@ export default function createScene(container: HTMLElement) {
   const geoMap = new GeoMap(container)
 
   geoMap.createMap(chinaJson)
-  geoMap.on("click", (e, g) => {
+  geoMap.on("click", (_, g) => {
     geoMap.setAreaColor(g)
   })
 
@@ -50,5 +50,6 @@ export default function createScene(container: HTMLElement) {
    geoMap.drawLightBar(datas, colors)
 
    // 绘制线条
+   // @ts-ignore
    geoMap.drawFlyLine(flyDatas, colors)
 }

@@ -1,4 +1,5 @@
 import { PlaneGeometry, Clock, Mesh, Scene, PerspectiveCamera, WebGLRenderer, AxesHelper, DoubleSide, ShaderMaterial, Color  } from "three"
+// @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GUI } from "dat.gui"
 
@@ -53,7 +54,7 @@ export default function createScene(container: HTMLElement) {
         value: uniformParams.uNoiseScale,
       },
       uTIme: {
-        value: uniformParams.uTIme,
+        value: uniformParams.uTime,
       },
       uLowColor: {
         value: new Color(uniformParams.uLowColor),
