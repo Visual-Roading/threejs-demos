@@ -4,7 +4,7 @@
 <template>
   <div class="home-pg">
     <h2 class="title">This is a project for vue demos.</h2>
-    <img src="snapshot.png" class="snapshot" style="width: 100%;height: 100%;"/>
+    <img src="../../../public/snapshot.png" class="snapshot" style="width: 100%;height: 100%;"/>
   </div>
 </template>
 <style lang="scss" scoped>
