@@ -153,6 +153,29 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
       },
     ],
   },
+  {
+    path: "/animation",
+    meta: {
+      title: "动画"
+    },
+    children: [
+      {
+        path: "",
+        meta: {
+          title: "城市"
+        },
+        component: () => import("@/pages/animation/city/index.vue"),
+      },
+      {
+        path: "bone",
+        meta: {
+          title: "骨骼"
+        },
+        component: () => import("@/pages/animation/bone/index.vue"),
+      },
+      
+    ],
+  },
 ]
 
 export default threeJSDemoRoutes
