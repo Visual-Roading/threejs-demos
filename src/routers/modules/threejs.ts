@@ -59,28 +59,6 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
     ]
   },
   {
-    path: "/post-processing",
-    meta: {
-      title: "后期处理"
-    },
-    children: [
-      {
-        path: "",
-        meta: {
-          title: "基础"
-        },
-        component: () => import("@/pages/post-processing/basic/index.vue"),
-      },
-      {
-        path: "custom",
-        meta: {
-          title: "自定义"
-        },
-        component: () => import("@/pages/post-processing/custom/index.vue"),
-      },
-    ],
-  },
-  {
     path: "/geo-map",
     meta: {
       title: "Geo地图"
@@ -173,7 +151,49 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         },
         component: () => import("@/pages/animation/bone/index.vue"),
       },
-      
+      {
+        path: "morph",
+        meta: {
+          title: "变形"
+        },
+        component: () => import("@/pages/animation/morph/index.vue"),
+      },
+    ],
+  },
+  {
+    path: "/post-processing",
+    meta: {
+      title: "后期处理"
+    },
+    children: [
+      {
+        path: "",
+        meta: {
+          title: "基础"
+        },
+        component: () => import("@/pages/post-processing/basic/index.vue"),
+      },
+      {
+        path: "custom",
+        meta: {
+          title: "自定义"
+        },
+        component: () => import("@/pages/post-processing/custom/index.vue"),
+      },
+      {
+        path: "shine",
+        meta: {
+          title: "发光"
+        },
+        component: () => import("@/pages/post-processing/shine/index.vue"),
+      },
+      {
+        path: "bloom-layer",
+        meta: {
+          title: "层级发光"
+        },
+        component: () => import("@/pages/post-processing/bloom-layer/index.vue"),
+      },
     ],
   },
 ]
