@@ -158,6 +158,13 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         },
         component: () => import("@/pages/animation/morph/index.vue"),
       },
+      {
+        path: "particle",
+        meta: {
+          title: "粒子"
+        },
+        component: () => import("@/pages/animation/particle/index.vue"),
+      },
     ],
   },
   {
