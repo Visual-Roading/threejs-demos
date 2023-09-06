@@ -165,6 +165,13 @@ const threeJSDemoRoutes: RouteRecordRaw[] = [
         },
         component: () => import("@/pages/animation/particle/index.vue"),
       },
+      {
+        path: "scroll",
+        meta: {
+          title: "滚动"
+        },
+        component: () => import("@/pages/animation/scroll/index.vue"),
+      },
     ],
   },
   {
